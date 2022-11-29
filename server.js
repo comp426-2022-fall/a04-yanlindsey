@@ -12,7 +12,7 @@ if (args.port) {
 	port = args.port;
 }
 
-app.get('/app', (req, res) => {
+app.get('/app/', (req, res) => {
 	res.send("200 OK");
 })
 
