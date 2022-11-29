@@ -20,6 +20,13 @@ app.get('/app/roll/', (req, res) => {
 	res.send(roll(6, 2, 1));
 })
 
+app.post('/app/roll/', (req, res) => {
+	let sides = parseInt(req.body.sides);
+	let dice = parseInt(req.body.dice);
+	let rolls = parseInt(req.body.rolls);
+	res.send(roll(sides, dice, rolls));
+});
+
 app.get('/app/roll/:sides/', (req, res) => {
 	let sides = parseInt(req.params.sides);
 	res.send(roll(sides,2,1));
